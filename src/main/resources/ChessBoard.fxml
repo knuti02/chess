@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Chess.main.ChessController">
+
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  
+   <children>
+  
+      <GridPane accessibleRole="IMAGE_VIEW">
+      <columnConstraints>
+          <ColumnConstraints /> <!-- empty column -->
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+          <RowConstraints />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+          <!-- light: d9dcae; dark: 8c8e59 -->
+
+          <!-- row 1 -->
+
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+
+          <!-- row 2 -->
+
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+
+          <!-- row 3 -->
+
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+
+          <!-- row 4 -->
+
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+
+          <!-- row 5 -->
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+
+          <!-- row 6 -->
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+
+          <!-- row 7 -->
+
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+
+          <!-- row 8 -->
+
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+          <Rectangle fill="#8c8e59" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+          <Rectangle fill="#d9dcae" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+
+          <!-- images -->
+
+          <!-- black row 1-->
+          <ImageView fx:id="r1c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_rook.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r1c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_knight.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r1c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_bishop.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r1c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_queen.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r1c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_king.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r1c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_bishop.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r1c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_knight.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r1c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_rook.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+
+          <!-- black row 2 -->
+          <ImageView fx:id="r2c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <image>
+              <Image backgroundLoading="true" url="@images/black_pawn.png" />
+            </image>
+            <cursor>
+              <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+              <DropShadow color="WHITE" />
+            </effect>
+          </ImageView>
+          <ImageView fx:id="r2c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r2c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r2c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r2c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r2c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r2c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r2c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
+              <image>
+                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="WHITE" />
+              </effect>
+          </ImageView>
+
+          <!-- white row 1-->
+          <ImageView fx:id="r8c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_rook.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r8c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_knight.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r8c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_bishop.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r8c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_queen.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r8c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_king.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r8c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_bishop.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r8c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_knight.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r8c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="8">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_rook.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+
+          <!-- white row 2 -->
+          <ImageView fx:id="r7c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <image>
+              <Image backgroundLoading="true" url="@images/white_pawn.png" />
+            </image>
+            <cursor>
+              <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+              <DropShadow color="BLACK" />
+            </effect>
+          </ImageView>
+          <ImageView fx:id="r7c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r7c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r7c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r7c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r7c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r7c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          <ImageView fx:id="r7c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="7">
+              <image>
+                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              </image>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <effect>
+                <DropShadow color="BLACK" />
+              </effect>
+          </ImageView>
+          
+          <!-- text abc -->
+
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#d9dcae" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="a" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#8c8e59" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="b" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#d9dcae" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="c" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#8c8e59" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="d" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="5" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#d9dcae" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="e" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="6" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#8c8e59" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="f" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="7" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#d9dcae" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#8c8e59" layoutX="5" layoutY="45" strokeType="OUTSIDE" strokeWidth="0.0" text="h" />
+            </children>
+          </Pane>
+
+          <!-- text 123 -->
+
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+            <children>
+              <Text fill="#d9dcae" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+            <children>
+              <Text fill="#8c8e59" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+            <children>
+              <Text fill="#d9dcae" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+            <children>
+              <Text fill="#8c8e59" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="5">
+            <children>
+              <Text fill="#d9dcae" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="6">
+            <children>
+              <Text fill="#8c8e59" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="7">
+            <children>
+              <Text fill="#d9dcae" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+            </children>
+          </Pane>
+          <Pane disable="true" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="8" GridPane.rowIndex="8">
+            <children>
+              <Text fill="#8c8e59" layoutX="40" layoutY="15" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+            </children>
+          </Pane>
+
+      </children>
+    </GridPane>
+
+    <!-- menu -->
+    <Pane maxHeight="51.0" minHeight="50.0" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #f7ebf0;" GridPane.rowIndex="1">
+      <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="371.0" layoutY="10.0" onMouseClicked="#handleLoad" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/load.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="338.0" layoutY="10.0" onMouseClicked="#handleSave" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/save.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="36.0" layoutY="10.0" onMouseClicked="#turnBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/back-arrow-icon-11550122033egydzyhmwy.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="10.0" onMousePressed="#changeStyle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/swap.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="101.0" layoutX="150.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/NTNU-logo.svg.png" />
+               </image>
+            </ImageView>
+            <Line endX="330.0" layoutX="70.0" startX="-70.0000228881836" />
+      </children>
+    </Pane>
+
+  </children>
+</GridPane>

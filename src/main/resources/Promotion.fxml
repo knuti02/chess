@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.Cursor?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children> 
+      <Rectangle arcWidth="5.0" fill="#d9dcae" height="131.0" layoutX="393.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <Rectangle arcWidth="5.0" fill="#d9dcae" height="131.0" layoutX="263.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <Rectangle arcWidth="5.0" fill="#d9dcae" height="131.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <Rectangle arcWidth="5.0" fill="#d9dcae" height="131.0" layoutX="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <Rectangle arcWidth="5.0" fill="#8c8e59" height="131.0" layoutX="393.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <Rectangle arcWidth="5.0" fill="#8c8e59" height="131.0" layoutX="262.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <Rectangle arcWidth="5.0" fill="#8c8e59" height="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <Rectangle arcWidth="5.0" fill="#8c8e59" height="131.0" layoutX="131.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="131.0" />
+      <ImageView fx:id="queen" fitHeight="100.0" fitWidth="150.0" layoutX="16.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/black_queen.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="knight" fitHeight="100.0" fitWidth="150.0" layoutX="147.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/black_knight.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="rook" fitHeight="100.0" fitWidth="150.0" layoutX="278.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/black_rook.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="bishop" fitHeight="100.0" fitWidth="150.0" layoutX="409.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/black_bishop.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text fill="#3e4b21" layoutX="32.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Promote your pawn" wrappingWidth="462.93670654296875">
+         <font>
+            <Font size="53.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
