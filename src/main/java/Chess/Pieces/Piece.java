@@ -3,6 +3,7 @@ package Chess.Pieces;
 import Chess.Board.*;
 import Chess.main.PromotionController;
 import Chess.main.Saver;
+import Chess.main.WinController;
 
 import java.util.ArrayList;
 import java.io.FileNotFoundException;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.scene.layout.GridPane;
@@ -158,7 +160,7 @@ public abstract class Piece {
     public void promote() {
         // New window (Stage)
         try {
-            PromotionController promotion = new PromotionController(this);
+            PromotionController promotion = new PromotionController(this, this.getColor());
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Promotion.fxml"));
             loader.setController(promotion);
             Parent root = loader.load();
@@ -180,6 +182,36 @@ public abstract class Piece {
             secondaryStage.setTitle("Promote");
             secondaryStage.setResizable(false);
 
+            secondaryStage.show();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    public void endScreen(int winner, boolean isDraw) {
+        try {
+            WinController winScreen = new WinController(this.getColor(), isDraw, this.getBoard());
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("WinScreen.fxml"));
+            loader.setController(winScreen);
+            Parent root = loader.load();
+            
+
+            Stage secondaryStage = new Stage(); //StageStyle.UNDECORATED
+            secondaryStage.setScene(new Scene(root));
+            // Specifies the modality for new window.
+            secondaryStage.initModality(Modality.WINDOW_MODAL);
+
+            // Specifies the owner Window (parent) for new window
+            //secondaryStage.initOwner(((Node) (event.getSource())).getScene().getWindow());
+
+            //YESSSS
+            secondaryStage.initOwner(this.getImageView().getScene().getWindow());
+            //YESSS
+
+            secondaryStage.getIcons().add(new Image("/images/icon.png"));
+            secondaryStage.setTitle(this.getColor() == 1 ? "WHITE WON!!!" : "BLACK WON!!!");
+            if (isDraw) secondaryStage.setTitle("IT'S A DRAW!!!");
+            secondaryStage.setResizable(false);
             secondaryStage.show();
         } catch (IOException e1) {
             e1.printStackTrace();
@@ -264,16 +296,16 @@ public abstract class Piece {
 
             if (castle(end)) { 
 
-                if (!isKingTargeted(this.getColor() * -1) && noMoves(this.getColor() * -1)) System.out.println("Draw");
-                if (isInCheckMate(this.getColor() * -1)) System.out.println("Game Over");
+                if (!isKingTargeted(this.getColor() * -1) && noMoves(this.getColor() * -1)) endScreen(this.getColor(), true);
+                if (isInCheckMate(this.getColor() * -1)) endScreen(this.getColor(), false);
 
                 this.board.nextTurn();
                 return true;
             } else if (this.getType() == Type.KING && Math.abs(this.getSquare().getX() - end.getX()) == 2) return false;
 
             if (enPassant(end)) {
-                if (!isKingTargeted(this.getColor() * -1) && noMoves(this.getColor() * -1)) System.out.println("Draw");
-                if (isInCheckMate(this.getColor() * -1)) System.out.println("Game Over");
+                if (!isKingTargeted(this.getColor() * -1) && noMoves(this.getColor() * -1)) endScreen(this.getColor(), true);
+                if (isInCheckMate(this.getColor() * -1)) endScreen(this.getColor(), false);
 
                 this.board.nextTurn();
                 return true;
@@ -293,8 +325,8 @@ public abstract class Piece {
             || this.getColor() == -1 && this.getSquare().getY() == 7)) this.promote(); //noe show and wait ting?
 
             //check after release that it will lead to checkmate or draw
-            if (!isKingTargeted(this.getColor() * -1) && noMoves(this.getColor() * -1)) System.out.println("Draw");
-            if (isInCheckMate(this.getColor() * -1)) System.out.println("Game Over");
+            if (!isKingTargeted(this.getColor() * -1) && noMoves(this.getColor() * -1)) endScreen(this.getColor(), true);
+            if (isInCheckMate(this.getColor() * -1)) endScreen(this.getColor(), false);
 
             this.board.nextTurn();
             return true;
@@ -362,7 +394,7 @@ public abstract class Piece {
         String c;
         c = (this.getColor() == 1) ? "w" : "b";
 
-        return "Type: " + this.getType().toString() + "; color: " + c + 
+        return "Type: " + this.getType()+ "; color: " + c + 
         "; position (Y|X): "  + this.getSquare().getY()+"|"+ this.getSquare().getX() + 
         "; has moved: " + this.hasMoved() + "; inEnPassant: " + this.inEnPassant + 
         "; Id: " + this.getId() + "; moves: " + movesForPrint();

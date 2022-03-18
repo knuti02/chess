@@ -169,8 +169,14 @@ public class ChessController {
 
     private void adjustImages() { //adjust back to pawns if you load to a file before you promoted
         for (Piece p : game.getPieces()) {
-            if (p.getType() == Type.PAWN) { //ALSO ADJUST FOR OTHER STYLE!!!
-                p.getImageView().setImage(new Image("/images/" + ((p.getColor() == 1) ? "white" : "black") + "_pawn.png"));
+            if (p.getType() == Type.PAWN) {
+                if (this.style == -1) {
+                    numb = rd.nextInt(2) + 1;
+                    if (numb == 1) p.getImageView().setImage(new Image("/images/save.png"));
+                    else p.getImageView().setImage(new Image("/images/load.png"));
+                } else {
+                    p.getImageView().setImage(new Image("/images/" + ((p.getColor() == 1) ? "white" : "black") + "_pawn.png"));
+                }
             }
         }
     }
@@ -215,7 +221,7 @@ public class ChessController {
         for (Piece p : game.getPieces()) {
             if (p.getImageView() != null) {
                 if (this.style == -1) {
-                    numb = rd.nextInt(2 - 1 + 1) + 1;
+                    numb = rd.nextInt(2) + 1;
                     if (numb == 1) p.getImageView().setImage(new Image("/images/save.png"));
                     else p.getImageView().setImage(new Image("/images/load.png"));
                 } else {

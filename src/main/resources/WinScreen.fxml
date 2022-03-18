@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="430.0" style="-fx-background-color: #f7ebf0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fill="#8c8e59" layoutX="215.0" layoutY="22.0" radius="218.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" />
+      <Button fx:id="newGame" layoutX="164.0" layoutY="247.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #8c8e59; -fx-background-radius: 50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="New Game?" textFill="#f7ebf0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <StackPane layoutX="32.0" layoutY="14.0" prefHeight="150.0" prefWidth="374.0" style="-fx-background-color: #d9dcae; -fx-background-radius: 100; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+         <children>
+            <Text fx:id="textField" fill="#f7ebf0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Comic Sans MS&quot;;" text="WHITE WON!!!!" wrappingWidth="319.8890380859375">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <StackPane layoutX="93.0" layoutY="127.0" prefHeight="90.0" prefWidth="244.0" style="-fx-background-color: #d9dcae; -fx-background-radius: 100; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+         <children>
+            <Text fx:id="faces" fill="#f7ebf0" strokeType="OUTSIDE" strokeWidth="0.0" text="ヾ(•ω•`)o">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

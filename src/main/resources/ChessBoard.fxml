@@ -594,21 +594,33 @@
                <image>
                   <Image url="@images/load.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="338.0" layoutY="10.0" onMouseClicked="#handleSave" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/save.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="36.0" layoutY="10.0" onMouseClicked="#turnBack" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/back-arrow-icon-11550122033egydzyhmwy.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="10.0" onMousePressed="#changeStyle" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/swap.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="101.0" layoutX="150.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>

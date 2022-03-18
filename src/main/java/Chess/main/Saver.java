@@ -43,15 +43,15 @@ public class Saver {
 
     public void load(String fileName) throws FileNotFoundException {
         try (Scanner scanner = new Scanner(new File(getFilePath(fileName)))) {
-            this.board.resetAbsolute();
-            this.board.setCurrentTurn(Integer.valueOf(scanner.nextLine()));
-           // System.out.println(this.board.getCurrentTurn());
-            
-
+            try { 
+                this.board.resetAbsolute();
+                this.board.setCurrentTurn(Integer.valueOf(scanner.nextLine()));
+            } catch (Exception e) {
+                return ;
+            }
             while (scanner.hasNextLine()) {
                 String[] pieceInfo = scanner.nextLine().split(";");
                 if (pieceInfo[0] == "") break;
-                //System.out.println(pieceInfo[0] + pieceInfo[1] + pieceInfo[2] + pieceInfo[3] + pieceInfo[4]);
                 String type = pieceInfo[0].split(": ")[1];
                 String color = pieceInfo[1].split(": ")[1];
                 String[] pos = pieceInfo[2].split(": ")[1].split("|");
@@ -89,7 +89,6 @@ public class Saver {
                 board.getState().getSquare(Integer.valueOf(pos[0]), Integer.valueOf(pos[2])).setPiece(p);
             }
 
-            //System.out.println(board.getPieces());
             System.out.println("Game Loaded.");
             save("DO_NOT_TOUCH", true);
         }
