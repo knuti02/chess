@@ -169,11 +169,12 @@ public class ChessController {
 
     private void adjustImages() { //adjust back to pawns if you load to a file before you promoted
         for (Piece p : game.getPieces()) {
+            String c = (p.getColor() == 1) ? "white" : "black";
             if (p.getType() == Type.PAWN) {
                 if (this.style == -1) {
                     numb = rd.nextInt(2) + 1;
-                    if (numb == 1) p.getImageView().setImage(new Image("/images/save.png"));
-                    else p.getImageView().setImage(new Image("/images/load.png"));
+                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "1.png", 80, 80, false, false));
+                    else p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "2.png", 80, 80, false, false));
                 } else {
                     p.getImageView().setImage(new Image("/images/" + ((p.getColor() == 1) ? "white" : "black") + "_pawn.png"));
                 }
@@ -219,13 +220,13 @@ public class ChessController {
         else ani.stop();
 
         for (Piece p : game.getPieces()) {
+            String c = (p.getColor() == 1) ? "white" : "black";
             if (p.getImageView() != null) {
                 if (this.style == -1) {
                     numb = rd.nextInt(2) + 1;
-                    if (numb == 1) p.getImageView().setImage(new Image("/images/save.png"));
-                    else p.getImageView().setImage(new Image("/images/load.png"));
+                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "1.png", 80, 80, false, false));
+                    else p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "2.png", 80, 80, false, false));
                 } else {
-                    String c = (p.getColor() == 1) ? "white" : "black";
                     String type = p.getType().toString().toLowerCase();
 
                     String image = "/images/" + c + "_" + type + ".png";
@@ -251,9 +252,10 @@ public class ChessController {
         public void doHandle() {
             if (style == -1) {
                 for (Piece p : game.getPieces()) {
+                    String c = (p.getColor() == 1) ? "white" : "black";
                     numb = rd.nextInt(2) + 1;
-                    if (numb == 1) p.getImageView().setImage(new Image("/images/save.png"));
-                    else p.getImageView().setImage(new Image("/images/load.png"));
+                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "1.png", 80, 80, false, false));
+                    else p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "2.png", 80, 80, false, false));
                 }
             }
         }
