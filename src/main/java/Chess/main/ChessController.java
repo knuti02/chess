@@ -222,6 +222,7 @@ public class ChessController {
 
     @FXML
     void handleLoad() throws FileNotFoundException{
+        for (Piece p : game.getPieces()) {p.getImageView().setVisible(false);}
         saver.load("test");
         connectPiecesLoad();
         adjustImagePosition();
@@ -230,6 +231,7 @@ public class ChessController {
 
     @FXML
     void turnBack() throws FileNotFoundException{
+        for (Piece p : game.getPieces()) {p.getImageView().setVisible(false);}
         saver.load("DO_NOT_TOUCH");
         connectPiecesLoad();
         adjustImagePosition();
@@ -299,7 +301,7 @@ public class ChessController {
 
         public void shuffle() {
             count++;
-            if (count == 10) count = 0;
+            if (count == 12) count = 0;
             String c = count % 2 == 0 ? "white" : "black";
             style0.setImage(new Image("/images/Custom0/" + c +"_" + lst[count / 2] + ".png"));
             style1.setImage(new Image("/images/Custom1/" + c + "_" + lst[count / 2] + "2.png"));

@@ -145,8 +145,10 @@ public abstract class Piece {
         return this.inEnPassant;
     }
     public boolean enPassant(Square end) throws FileNotFoundException {
-        if (this.getType() == Type.PAWN && this.getSquare().getX() != end.getX() && !end.isOccupied()) {   
+        if (this.getType() == Type.PAWN && this.getSquare().getX() != end.getX() && !end.isOccupied()) { 
+            this.getBoard().getState().getSquare(end.getY() + 1 * this.getColor(), end.getX()).getPiece().setEnPassant(true);  
             turnBack.save("DO_NOT_TOUCH", true);
+            this.getBoard().getState().getSquare(end.getY() + 1 * this.getColor(), end.getX()).getPiece().setEnPassant(false);  
             
             this.getBoard().getState().getSquare(end.getY() + 1 * this.getColor(), end.getX()).getPiece().getImageView().setVisible(false);
             this.getBoard().getState().getSquare(end.getY() + 1 * this.getColor(), end.getX()).setEmpty();

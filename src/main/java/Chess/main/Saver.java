@@ -90,7 +90,6 @@ public class Saver {
 
                 board.getState().getSquare(Integer.valueOf(pos[0]), Integer.valueOf(pos[2])).setPiece(p);
             }
-
             System.out.println("Game Loaded.");
             save("DO_NOT_TOUCH", true);
         }
