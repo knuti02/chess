@@ -15,7 +15,7 @@ public class NewGameController {
     @FXML
     private void newGame(ActionEvent event) {
         ((Node)(event.getSource())).getScene().getWindow().hide();
-        board.getPieces().get(0).getImageView().getScene().getWindow().hide();
+        ((Stage) board.getPieces().get(0).getImageView().getScene().getWindow()).close();
         ChessApp game = new ChessApp();
         try {
             game.start(new Stage());
