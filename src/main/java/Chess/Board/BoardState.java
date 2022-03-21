@@ -5,12 +5,13 @@ import java.util.ArrayList;
 
 public class BoardState {
     ChessBoard board;
-    int currentTurn;
+    int currentTurn, style;
 
     public BoardState() {
         this.board = new ChessBoard(8,8);
         this.init();
         this.currentTurn = 1;
+        this.style = 0;
     }
 
     private void init() {
@@ -75,6 +76,14 @@ public class BoardState {
 
     public ChessBoard getState() {
         return this.board;
+    }
+
+    public void setStyle(int style) {
+        this.style = style;
+    }
+    
+    public int getStyle() {
+        return this.style;
     }
 
     public ArrayList<Piece> getPieces() {

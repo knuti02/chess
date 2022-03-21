@@ -160,19 +160,15 @@ public abstract class Piece {
     public void promote() {
         // New window (Stage)
         try {
-            PromotionController promotion = new PromotionController(this, this.getColor());
+            PromotionController promotion = new PromotionController(this, this.getColor(), board.getStyle());
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Promotion.fxml"));
             loader.setController(promotion);
             Parent root = loader.load();
-            
 
             Stage secondaryStage = new Stage(StageStyle.UNDECORATED);
             secondaryStage.setScene(new Scene(root));
             // Specifies the modality for new window.
             secondaryStage.initModality(Modality.WINDOW_MODAL);
-
-            // Specifies the owner Window (parent) for new window
-            //secondaryStage.initOwner(((Node) (event.getSource())).getScene().getWindow());
 
             //YESSSS
             secondaryStage.initOwner(this.getBoard().getPieces().
@@ -215,7 +211,7 @@ public abstract class Piece {
             secondaryStage.show();
         } catch (IOException e1) {
             e1.printStackTrace();
-        }
+        } 
     }
 
     public void setImageView(ImageView imageView) {
@@ -231,11 +227,12 @@ public abstract class Piece {
                 e.printStackTrace();
             }
         });
-
     }
+
     public ImageView getImageView() {
         return this.imageView;
     }
+
     public void setSquare(Square end) {
         this.pos.setEmpty();
         this.pos = end;
@@ -347,7 +344,6 @@ public abstract class Piece {
         }
         return moves;
     }
-
     
     //for dragging mechanics
     public void imagePressed(MouseEvent event, Piece p) {
@@ -367,11 +363,6 @@ public abstract class Piece {
             p.getSquare().getY() + (int) Math.round(p.imageView.getY() / 50),
             p.getSquare().getX() + (int) Math.round(p.imageView.getX() / 50))
             )) {
-                /*
-                p.move(p.getBoard().getState().getSquare(
-                    p.getSquare().getY() + (int) Math.round(p.imageView.getY() / 50),
-                    p.getSquare().getX() + (int) Math.round(p.imageView.getX() / 50)));*/
-
                 p.imageView.setX(Math.round(p.imageView.getX() / 50) * 50);
                 p.imageView.setY(Math.round(p.imageView.getY() / 50) * 50);
                 p.imageView.setTranslateX(p.imageView.getX());

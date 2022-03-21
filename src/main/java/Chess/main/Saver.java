@@ -43,12 +43,14 @@ public class Saver {
 
     public void load(String fileName) throws FileNotFoundException {
         try (Scanner scanner = new Scanner(new File(getFilePath(fileName)))) {
+            int turn = 0;
             try { 
-                this.board.resetAbsolute();
-                this.board.setCurrentTurn(Integer.valueOf(scanner.nextLine()));
+                turn = (Integer.valueOf(scanner.nextLine()));
             } catch (Exception e) {
                 return ;
             }
+            this.board.resetAbsolute();
+            this.board.setCurrentTurn(turn);
             while (scanner.hasNextLine()) {
                 String[] pieceInfo = scanner.nextLine().split(";");
                 if (pieceInfo[0] == "") break;

@@ -11,16 +11,20 @@ import Chess.Pieces.*;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.DataFormat;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class ChessController {
     private BoardState game;
     public static DataFormat dataFormat =  new DataFormat("myCell");
-    private int style = 1, numb;
+    private int style = 0, numb;
     private Random rd = new Random();
     Animation ani = new Animation();
     private Saver saver;
@@ -28,6 +32,9 @@ public class ChessController {
     @FXML
     private ImageView r1c1, r1c2, r1c3, r1c4, r1c5, r1c6, r1c7, r1c8, r2c1, r2c2, r2c3, r2c4, r2c5, r2c6, r2c7, r2c8, 
     r8c1, r8c2, r8c3, r8c4, r8c5, r8c6, r8c7, r8c8, r7c1, r7c2, r7c3, r7c4, r7c5, r7c6, r7c7, r7c8;
+
+    @FXML
+    private ImageView style0, style1;
 
     ArrayList<ImageView> blackPawns = new ArrayList<ImageView>();
     ArrayList<ImageView> whitePawns = new ArrayList<ImageView>();
@@ -171,25 +178,42 @@ public class ChessController {
         for (Piece p : game.getPieces()) {
             String c = (p.getColor() == 1) ? "white" : "black";
             if (p.getType() == Type.PAWN) {
-                if (this.style == -1) {
+                if (this.style != 0) {
                     numb = rd.nextInt(2) + 1;
-                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "1.png", 80, 80, false, false));
-                    else p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "2.png", 80, 80, false, false));
+                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_" + p.getType().toString().toLowerCase() + "1.png"));
+                    else p.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_" + p.getType().toString().toLowerCase() + "2.png"));
                 } else {
-                    p.getImageView().setImage(new Image("/images/" + ((p.getColor() == 1) ? "white" : "black") + "_pawn.png"));
+                    p.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + ((p.getColor() == 1) ? "white" : "black") + "_pawn.png"));
                 }
             }
         }
     }
 
     @FXML
-    void onMousePressed(MouseEvent event){}
+    void newGame() {
+        try {
+            NewGameController newGame = new NewGameController(game);
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("NewGame.fxml"));
+            loader.setController(newGame);
+            Parent root = loader.load();
 
-    @FXML
-    void onMouseDragged(MouseEvent event){}
+            Stage secondaryStage = new Stage();
+            secondaryStage.setScene(new Scene(root));
+            // Specifies the modality for new window.
+            secondaryStage.initModality(Modality.WINDOW_MODAL);
 
-    @FXML
-    void onMouseReleased(MouseEvent event){}
+            secondaryStage.initOwner(game.getPieces().
+            get(0).getImageView().getScene().getWindow());
+
+            secondaryStage.setTitle("Promote");
+            secondaryStage.getIcons().add(new Image("/images/icon.png"));
+            secondaryStage.setResizable(false);
+
+            secondaryStage.show();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
 
     @FXML
     void handleSave() throws IOException{
@@ -212,24 +236,35 @@ public class ChessController {
         adjustImages();
     }
 
-    @FXML 
-    void changeStyle() {
-        this.style *= -1;
+    @FXML
+    void changeStyle0() {
+        this.style = 0;
+        game.setStyle(0);
+        changeStyle();
+    }
+    @FXML
+    void changeStyle1() {
+        this.style = 1;
+        game.setStyle(1);
+        changeStyle();
+    }
 
-        if (this.style == -1) ani.start();
+    void changeStyle() {
+        if (this.style != 0) {
+            ani.start();
+            numb = rd.nextInt(2) + 1;
+        }
         else ani.stop();
 
         for (Piece p : game.getPieces()) {
             String c = (p.getColor() == 1) ? "white" : "black";
             if (p.getImageView() != null) {
-                if (this.style == -1) {
-                    numb = rd.nextInt(2) + 1;
-                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "1.png", 80, 80, false, false));
-                    else p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "2.png", 80, 80, false, false));
+                if (this.style != 0) {
+                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_" + p.getType().toString().toLowerCase() + "1.png"));
+                    else p.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_" + p.getType().toString().toLowerCase() + "2.png"));
                 } else {
                     String type = p.getType().toString().toLowerCase();
-
-                    String image = "/images/" + c + "_" + type + ".png";
+                    String image = "/images/Custom0/" + c + "_" + type + ".png";
                     p.getImageView().setImage(new Image(image));
                 }
             }
@@ -237,8 +272,9 @@ public class ChessController {
     }
 
     private class Animation extends AnimationTimer {
-        private int sec, numb;
+        private int sec, numb, count = 0;
         private Random rd = new Random();
+        private String lst[] = {"pawn", "bishop", "knight", "rook", "queen", "king"};
 
         @Override
         public void handle(long a) {
@@ -246,18 +282,27 @@ public class ChessController {
             if (sec > 100) {
                 sec = 0;
                 doHandle();
+                shuffle();
             }
         }
 
         public void doHandle() {
-            if (style == -1) {
+            if (style != 0) {
                 for (Piece p : game.getPieces()) {
                     String c = (p.getColor() == 1) ? "white" : "black";
                     numb = rd.nextInt(2) + 1;
-                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "1.png", 80, 80, false, false));
-                    else p.getImageView().setImage(new Image("/images/Custom1/" + c + "_" + p.getType().toString().toLowerCase() + "2.png", 80, 80, false, false));
+                    if (numb == 1) p.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_" + p.getType().toString().toLowerCase() + "1.png"));
+                    else p.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_" + p.getType().toString().toLowerCase() + "2.png"));
                 }
             }
+        }
+
+        public void shuffle() {
+            count++;
+            if (count == 10) count = 0;
+            String c = count % 2 == 0 ? "white" : "black";
+            style0.setImage(new Image("/images/Custom0/" + c +"_" + lst[count / 2] + ".png"));
+            style1.setImage(new Image("/images/Custom1/" + c + "_" + lst[count / 2] + "2.png"));
         }
     }
 }

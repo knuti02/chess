@@ -139,9 +139,9 @@
           <!-- images -->
 
           <!-- black row 1-->
-          <ImageView fx:id="r1c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_rook.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_rook.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -150,9 +150,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r1c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c2" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_knight.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_knight.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -161,9 +161,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r1c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_bishop.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_bishop.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -172,9 +172,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r1c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c4" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_queen.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_queen.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -183,9 +183,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r1c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c5" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_king.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_king.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -194,9 +194,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r1c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c6" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_bishop.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_bishop.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -205,9 +205,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r1c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c7" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_knight.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_knight.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -216,9 +216,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r1c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
+          <ImageView fx:id="r1c8" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
               <image>
-                <Image backgroundLoading="true" url="@images/black_rook.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_rook.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -229,9 +229,9 @@
           </ImageView>
 
           <!-- black row 2 -->
-          <ImageView fx:id="r2c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <image>
-              <Image backgroundLoading="true" url="@images/black_pawn.png" />
+              <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
             </image>
             <cursor>
               <Cursor fx:constant="HAND" />
@@ -240,9 +240,9 @@
               <DropShadow color="WHITE" />
             </effect>
           </ImageView>
-          <ImageView fx:id="r2c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c2" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
               <image>
-                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -251,9 +251,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r2c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
               <image>
-                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -262,9 +262,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r2c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c4" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
               <image>
-                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -273,9 +273,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r2c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c5" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
               <image>
-                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -284,9 +284,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r2c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c6" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
               <image>
-                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -295,9 +295,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r2c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c7" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
               <image>
-                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -306,9 +306,9 @@
                 <DropShadow color="WHITE" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r2c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
+          <ImageView fx:id="r2c8" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
               <image>
-                <Image backgroundLoading="true" url="@images/black_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/black_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -319,9 +319,9 @@
           </ImageView>
 
           <!-- white row 1-->
-          <ImageView fx:id="r8c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_rook.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_rook.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -330,9 +330,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r8c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c2" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_knight.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_knight.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -341,9 +341,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r8c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_bishop.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_bishop.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -352,9 +352,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r8c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c4" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_queen.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_queen.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -363,9 +363,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r8c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c5" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_king.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_king.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -374,9 +374,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r8c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c6" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_bishop.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_bishop.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -385,9 +385,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r8c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c7" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_knight.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_knight.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -396,9 +396,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r8c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="8">
+          <ImageView fx:id="r8c8" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="8">
               <image>
-                <Image backgroundLoading="true" url="@images/white_rook.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_rook.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -409,9 +409,9 @@
           </ImageView>
 
           <!-- white row 2 -->
-          <ImageView fx:id="r7c1" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
             <image>
-              <Image backgroundLoading="true" url="@images/white_pawn.png" />
+              <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
             </image>
             <cursor>
               <Cursor fx:constant="HAND" />
@@ -420,9 +420,9 @@
               <DropShadow color="BLACK" />
             </effect>
           </ImageView>
-          <ImageView fx:id="r7c2" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c2" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
               <image>
-                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -431,9 +431,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r7c3" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
               <image>
-                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -442,9 +442,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r7c4" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c4" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
               <image>
-                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -453,9 +453,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r7c5" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c5" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7">
               <image>
-                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -464,9 +464,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r7c6" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c6" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7">
               <image>
-                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -475,9 +475,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r7c7" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c7" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7">
               <image>
-                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -486,9 +486,9 @@
                 <DropShadow color="BLACK" />
               </effect>
           </ImageView>
-          <ImageView fx:id="r7c8" fitHeight="50.0" fitWidth="50.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="7">
+          <ImageView fx:id="r7c8" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="7">
               <image>
-                <Image backgroundLoading="true" url="@images/white_pawn.png" />
+                <Image backgroundLoading="true" url="@images/Custom0/white_pawn.png" />
               </image>
               <cursor>
                 <Cursor fx:constant="HAND" />
@@ -606,17 +606,17 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="36.0" layoutY="10.0" onMouseClicked="#turnBack" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="267.0" layoutY="8.0" onMouseClicked="#turnBack" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/back-arrow-icon-11550122033egydzyhmwy.png" />
+                  <Image url="@images/back.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="10.0" onMousePressed="#changeStyle" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="style0" fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="10.0" onMousePressed="#changeStyle0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/swap.png" />
+                  <Image url="@images/Custom0/white_pawn.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -628,6 +628,22 @@
                </image>
             </ImageView>
             <Line endX="330.0" layoutX="70.0" startX="-70.0000228881836" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="299.0" layoutY="10.0" onMouseClicked="#newGame" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/reset.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="style1" fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="10.0" onMousePressed="#changeStyle1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Custom1/white_pawn1.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
       </children>
     </Pane>
 

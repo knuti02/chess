@@ -15,7 +15,8 @@ import javafx.event.EventHandler;
 
 public class PromotionController implements Initializable {
     Piece piece;
-    String c;
+    String c, v;
+    int style;
 
     @FXML
     ImageView queen = new ImageView(), knight = new ImageView(), rook = new ImageView(), bishop = new ImageView();
@@ -23,11 +24,12 @@ public class PromotionController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println(piece);
+        v = style == 0 ? "" : "1";
 
-        queen.setImage(new Image("/images/" + c + "_queen.png"));
-        knight.setImage(new Image("/images/" + c + "_knight.png"));
-        rook.setImage(new Image("/images/" + c + "_rook.png"));
-        bishop.setImage(new Image("/images/" + c + "_bishop.png"));
+        queen.setImage(new Image("/images/Custom" + Integer.toString(this.style) + "/" + c + "_queen" + v +".png"));
+        knight.setImage(new Image("/images/Custom" + Integer.toString(this.style) + "/" + c + "_knight" + v +".png"));
+        rook.setImage(new Image("/images/Custom" + Integer.toString(this.style) + "/" + c + "_rook" + v +".png"));
+        bishop.setImage(new Image("/images/Custom" + Integer.toString(this.style) + "/" + c + "_bishop" + v +".png"));
 
         queen.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
@@ -35,7 +37,7 @@ public class PromotionController implements Initializable {
                 Queen promoted = new Queen(piece.getColor(), Type.QUEEN, piece.getBoard(), piece.getSquare());
 
                 promoted.setImageView(piece.getImageView());
-                promoted.getImageView().setImage(new Image("/images/" + c + "_queen.png"));
+                promoted.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_queen" + v +".png"));
                 piece.getSquare().setPiece(promoted);
 
                 ((Node)(event.getSource())).getScene().getWindow().hide();
@@ -51,7 +53,7 @@ public class PromotionController implements Initializable {
                 Knight promoted = new Knight(piece.getColor(), Type.KNIGHT, piece.getBoard(), piece.getSquare());
 
                 promoted.setImageView(piece.getImageView());
-                promoted.getImageView().setImage(new Image("/images/" + c + "_knight.png"));
+                promoted.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_knight" + v +".png"));
                 piece.getSquare().setPiece(promoted);
 
                 ((Node)(event.getSource())).getScene().getWindow().hide();
@@ -67,7 +69,7 @@ public class PromotionController implements Initializable {
                 Rook promoted = new Rook(piece.getColor(), Type.ROOK, piece.getBoard(), piece.getSquare());
 
                 promoted.setImageView(piece.getImageView());
-                promoted.getImageView().setImage(new Image("/images/" + c + "_rook.png"));
+                promoted.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_rook" + v +".png"));
                 piece.getSquare().setPiece(promoted);
 
                 ((Node)(event.getSource())).getScene().getWindow().hide();
@@ -83,7 +85,7 @@ public class PromotionController implements Initializable {
                 Bishop promoted = new Bishop(piece.getColor(), Type.BISHOP, piece.getBoard(), piece.getSquare());
 
                 promoted.setImageView(piece.getImageView());
-                promoted.getImageView().setImage(new Image("/images/" + c + "_bishop.png"));
+                promoted.getImageView().setImage(new Image("/images/Custom" + Integer.toString(style) + "/" + c + "_bishop" + v +".png"));
                 piece.getSquare().setPiece(promoted);
 
                 ((Node)(event.getSource())).getScene().getWindow().hide();
@@ -95,10 +97,11 @@ public class PromotionController implements Initializable {
 
     }
 
-    public PromotionController(Piece piece, int color) {
+    public PromotionController(Piece piece, int color, int style) {
         this.piece = piece;
         System.out.println(piece);
 
         this.c = color == 1 ? "white" : "black";
+        this.style = style;
     }
 }
