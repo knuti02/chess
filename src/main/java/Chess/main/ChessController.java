@@ -14,7 +14,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.DataFormat;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -100,15 +99,6 @@ public class ChessController {
                 if (GridPane.getRowIndex(i) - 1 == p.getSquare().getY() && 
                 GridPane.getColumnIndex(i) - 1 == p.getSquare().getX()) {
                     p.setImageView(i);
-                    p.getImageView().setOnMousePressed(event -> imagePressed(event, p));
-                    p.getImageView().setOnMouseDragged(event -> imageDrag(event, p));
-                    p.getImageView().setOnMouseReleased(event -> {
-                        try {
-                            imageReleased(event, p);
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
-            }
-        });
                 }
             }
         }
@@ -281,41 +271,6 @@ public class ChessController {
                 }
             }
         }
-    }
-
-    //for dragging mechanics
-    public void imagePressed(MouseEvent event, Piece p) {
-        System.out.println(p);
-    }
-
-    public void imageDrag(MouseEvent event, Piece p) {
-        p.getImageView().setX(event.getX() - p.getImageView().getFitWidth() / 2);
-        p.getImageView().setY(event.getY() - p.getImageView().getFitHeight() / 2);
-
-        p.getImageView().setTranslateX(p.getImageView().getX());
-        p.getImageView().setTranslateY(p.getImageView().getY());
-    }
-
-    public void imageReleased(MouseEvent event, Piece p) throws FileNotFoundException {
-        if (p.move(p.getBoard().getState().getSquare(
-            p.getSquare().getY() + (int) Math.round(p.getImageView().getY() / 50),
-            p.getSquare().getX() + (int) Math.round(p.getImageView().getX() / 50))
-            )) {
-                p.getImageView().setX(Math.round(p.getImageView().getX() / 50) * 50);
-                p.getImageView().setY(Math.round(p.getImageView().getY() / 50) * 50);
-                p.getImageView().setTranslateX(p.getImageView().getX());
-                p.getImageView().setTranslateY(p.getImageView().getY());
-        }       
-                
-        p.getImageView().setX(0);
-        p.getImageView().setY(0);
-        p.getImageView().setTranslateX(p.getImageView().getX());
-        p.getImageView().setTranslateY(p.getImageView().getY());
-
-        System.out.println(
-            String.valueOf(p.getSquare().getY() + Math.round(p.getImageView().getY() / 50) + " | " +
-            String.valueOf(p.getSquare().getX() + Math.round(p.getImageView().getX() / 50))
-            ));
     }
 
     private class Animation extends AnimationTimer {

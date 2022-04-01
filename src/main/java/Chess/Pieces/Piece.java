@@ -14,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -218,6 +219,16 @@ public abstract class Piece {
     public void setImageView(ImageView imageView) {
         this.imageView = imageView;
         this.id = imageView.getId();
+
+        this.imageView.setOnMousePressed(event -> imagePressed(event, this));
+        this.imageView.setOnMouseDragged(event -> imageDrag(event, this));
+        this.imageView.setOnMouseReleased(event -> {
+            try {
+                imageReleased(event, this);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     public ImageView getImageView() {
@@ -334,6 +345,41 @@ public abstract class Piece {
             e++;
         }
         return moves;
+    }
+    
+    //for dragging mechanics
+    public void imagePressed(MouseEvent event, Piece p) {
+        System.out.println(p);
+    }
+
+    public void imageDrag(MouseEvent event, Piece p) {
+        p.imageView.setX(event.getX() - p.imageView.getFitWidth() / 2);
+        p.imageView.setY(event.getY() - p.imageView.getFitHeight() / 2);
+
+        p.imageView.setTranslateX(p.imageView.getX());
+        p.imageView.setTranslateY(p.imageView.getY());
+    }
+
+    public void imageReleased(MouseEvent event, Piece p) throws FileNotFoundException {
+        if (p.move(p.getBoard().getState().getSquare(
+            p.getSquare().getY() + (int) Math.round(p.imageView.getY() / 50),
+            p.getSquare().getX() + (int) Math.round(p.imageView.getX() / 50))
+            )) {
+                p.imageView.setX(Math.round(p.imageView.getX() / 50) * 50);
+                p.imageView.setY(Math.round(p.imageView.getY() / 50) * 50);
+                p.imageView.setTranslateX(p.imageView.getX());
+                p.imageView.setTranslateY(p.imageView.getY());
+        }       
+                
+        p.imageView.setX(0);
+        p.imageView.setY(0);
+        p.imageView.setTranslateX(p.imageView.getX());
+        p.imageView.setTranslateY(p.imageView.getY());
+
+        System.out.println(
+            String.valueOf(p.getSquare().getY() + Math.round(p.imageView.getY() / 50) + " | " +
+            String.valueOf(p.getSquare().getX() + Math.round(p.imageView.getX() / 50))
+            ));
     }
 
     //toString
