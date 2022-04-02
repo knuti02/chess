@@ -40,7 +40,7 @@ public abstract class Piece {
         turnBack = new Saver(this.board);
     }
 
-    public boolean castle(Square end) throws FileNotFoundException {
+    private boolean castle(Square end) throws FileNotFoundException {
         if (this.getType() == Type.KING && Math.abs(this.getSquare().getX() - end.getX()) == 2 ) {
             if (isKingTargeted(this.getColor())) return false;
 
@@ -72,14 +72,14 @@ public abstract class Piece {
     }
 
     //finds king
-    public Piece kingPos(int c) {
+    private Piece kingPos(int c) {
         for (Piece p : board.getPieces()) {
             if (p.getType() == Type.KING && p.getColor() == c) return p;
         } return null;
     }
 
     //see if square is targeted by any piece of color c
-    public boolean isTargeted(Square sq, int c) {
+    private boolean isTargeted(Square sq, int c) {
         for (Piece p : board.getPieces()) {
             if (p.getColor() == c && p.getAvailableMoves().contains(sq)) return true;
         } return false;
@@ -91,7 +91,7 @@ public abstract class Piece {
     }
 
     //see if Square end is a valid move
-    public boolean isValidMove(Piece p, Square end, int c) {
+    private boolean isValidMove(Piece p, Square end, int c) {
         Square originalSquare = p.getSquare();
         Piece target = end.getPiece();
         boolean validMove;
@@ -144,7 +144,7 @@ public abstract class Piece {
     public boolean isInEnPassant() {
         return this.inEnPassant;
     }
-    public boolean enPassant(Square end) throws FileNotFoundException {
+    private boolean enPassant(Square end) throws FileNotFoundException {
         if (this.getType() == Type.PAWN && this.getSquare().getX() != end.getX() && !end.isOccupied()) { 
             this.getBoard().getState().getSquare(end.getY() + 1 * this.getColor(), end.getX()).getPiece().setEnPassant(true);  
             turnBack.save("DO_NOT_TOUCH", true);
@@ -159,7 +159,7 @@ public abstract class Piece {
         return false;
     }
 
-    public void promote() {
+    private void promote() {
         // New window (Stage)
         try {
             PromotionController promotion = new PromotionController(this, this.getColor(), board.getStyle());
@@ -246,7 +246,7 @@ public abstract class Piece {
     }
 
     //for check-mechanics
-    public void simulateMove(Square end) {
+    private void simulateMove(Square end) {
         this.pos.setEmpty();
         this.pos = end;
         end.setPiece(this);
@@ -331,10 +331,10 @@ public abstract class Piece {
             return true;
         }
         return false;
-    }
+    } 
 
     //ready the squares for printing || only for testing purposes
-    public ArrayList<ArrayList<Integer>> movesForPrint() {
+    private ArrayList<ArrayList<Integer>> movesForPrint() {
         ArrayList<ArrayList<Integer>> moves = new ArrayList<ArrayList<Integer>>();
         
         int e = 0;
@@ -348,11 +348,11 @@ public abstract class Piece {
     }
     
     //for dragging mechanics
-    public void imagePressed(MouseEvent event, Piece p) {
+    private void imagePressed(MouseEvent event, Piece p) {
         System.out.println(p);
     }
 
-    public void imageDrag(MouseEvent event, Piece p) {
+    private void imageDrag(MouseEvent event, Piece p) {
         p.imageView.setX(event.getX() - p.imageView.getFitWidth() / 2);
         p.imageView.setY(event.getY() - p.imageView.getFitHeight() / 2);
 
@@ -360,7 +360,7 @@ public abstract class Piece {
         p.imageView.setTranslateY(p.imageView.getY());
     }
 
-    public void imageReleased(MouseEvent event, Piece p) throws FileNotFoundException {
+    private void imageReleased(MouseEvent event, Piece p) throws FileNotFoundException {
         if (p.move(p.getBoard().getState().getSquare(
             p.getSquare().getY() + (int) Math.round(p.imageView.getY() / 50),
             p.getSquare().getX() + (int) Math.round(p.imageView.getX() / 50))

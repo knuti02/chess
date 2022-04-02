@@ -5,8 +5,7 @@ import Chess.Board.*;
 
 
 public class King extends Piece{
-    boolean inCheck = false;
- 
+    
     public King(int color, Type type, BoardState board, Square initPos) {
         super(color, type, board, initPos);
     }

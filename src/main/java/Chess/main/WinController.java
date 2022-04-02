@@ -20,11 +20,11 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 
 public class WinController  implements Initializable {
-    String winner;
-    ArrayList<String> expressions;
-    boolean isDraw;
-    Animation ani = new Animation();
-    BoardState board;
+    private String winner;
+    private ArrayList<String> expressions;
+    private boolean isDraw;
+    private Animation ani = new Animation();
+    private BoardState board;
 
     @FXML
     Text textField, faces;

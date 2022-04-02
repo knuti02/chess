@@ -95,7 +95,7 @@ public class Saver {
         }
     }
 
-    public static String getFilePath(String filename) {
+    private static String getFilePath(String filename) {
 		return Saver.class.getResource("/Saves/").getFile() + filename + ".txt";
 	}
 }

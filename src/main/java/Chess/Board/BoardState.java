@@ -47,14 +47,6 @@ public class BoardState {
         this.board.getSquare(7, 3).setPiece(new Queen(1, Type.QUEEN, this, this.board.getSquare(7, 3)));
     } 
 
-    public void reset() {
-        for (Piece p : getPieces()) {
-            p.getSquare().setEmpty();
-        }
-        this.init();
-        this.currentTurn = 1;
-    }
-
     public void resetAbsolute() {
         for (Piece p : getPieces()) {
             p.getSquare().setEmpty();

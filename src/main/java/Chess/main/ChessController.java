@@ -288,7 +288,7 @@ public class ChessController {
             }
         }
 
-        public void doHandle() {
+        private void doHandle() {
             if (style != 0) {
                 for (Piece p : game.getPieces()) {
                     String c = (p.getColor() == 1) ? "white" : "black";
@@ -299,7 +299,7 @@ public class ChessController {
             }
         }
 
-        public void shuffle() {
+        private void shuffle() {
             count++;
             if (count == 12) count = 0;
             String c = count % 2 == 0 ? "white" : "black";

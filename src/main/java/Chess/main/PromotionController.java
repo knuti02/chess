@@ -14,9 +14,9 @@ import javafx.scene.input.*;
 import javafx.event.EventHandler;
 
 public class PromotionController implements Initializable {
-    Piece piece;
-    String c, v;
-    int style;
+    private Piece piece;
+    private String c, v;
+    private int style;
 
     @FXML
     ImageView queen = new ImageView(), knight = new ImageView(), rook = new ImageView(), bishop = new ImageView();
