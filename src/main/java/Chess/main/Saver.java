@@ -9,7 +9,7 @@ import Chess.Board.BoardState;
 import Chess.Board.Square;
 import Chess.Pieces.*;
 
-public class Saver {
+public class Saver implements SaverInterface {
     private BoardState board;
 
     public Saver(BoardState board) {
