@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
 import javafx.animation.AnimationTimer;
@@ -49,8 +50,13 @@ public class WinController  implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         textField.setText(winner + " WON!!!");
-        if (isDraw) textField.setText("IT'S A DRAW!!!");
         textField.setFont(Font.font("Comic Sans MS", FontWeight.BOLD, 40));
+        textField.setFill(winner == "BLACK" ? Color.BLACK : Color.WHITE);
+        faces.setFill(winner == "BLACK" ? Color.BLACK : Color.WHITE);
+        if (isDraw) {
+            textField.setText("IT'S A DRAW!!!");
+            textField.setFill(Color.GREY);
+        }
         ani.start();
 
         newGame.setOnAction(event -> newGame(event));
@@ -83,6 +89,8 @@ public class WinController  implements Initializable {
                 }
                 faces.setText(expression);
                 faces.setFont(Font.font("Comic Sans MS", FontWeight.BOLD, 30));
+                faces.setFill(winner == "BLACK" ? Color.BLACK : Color.WHITE);;
+                if (isDraw) textField.setFill(Color.GREY);
             }
         }
     }
